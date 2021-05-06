@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Quest.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+title = "The King is Dead, Long live the King!"
+description = "Kjarrigan the almighty ruler of the entire universe and beyond died yesterday during a random encounter with a rubber duck. Resurrect him."

@@ -1,0 +1,128 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+
+[node name="Game" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Manual" type="PanelContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 34.0
+
+[node name="Events" type="GridContainer" parent="Manual"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 27.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New" type="Button" parent="Manual/Events"]
+margin_right = 198.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "New"
+
+[node name="Progress" type="Button" parent="Manual/Events"]
+margin_left = 202.0
+margin_right = 400.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Progress"
+
+[node name="Success" type="Button" parent="Manual/Events"]
+margin_left = 404.0
+margin_right = 602.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Success"
+
+[node name="Fail" type="Button" parent="Manual/Events"]
+margin_left = 606.0
+margin_right = 804.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Fail"
+
+[node name="Abort" type="Button" parent="Manual/Events"]
+margin_left = 808.0
+margin_right = 1006.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Abort"
+
+[node name="Quest" type="PanelContainer" parent="."]
+margin_top = 38.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Lists" type="HBoxContainer" parent="Quest"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 555.0
+
+[node name="InProgress" type="ItemList" parent="Quest/Lists"]
+margin_right = 334.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Preview" type="PanelContainer" parent="Quest/Lists"]
+margin_left = 338.0
+margin_right = 672.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Section" type="VBoxContainer" parent="Quest/Lists/Preview"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 327.0
+margin_bottom = 541.0
+
+[node name="Title" type="Label" parent="Quest/Lists/Preview/Section"]
+margin_right = 320.0
+margin_bottom = 14.0
+
+[node name="HSeparator" type="HSeparator" parent="Quest/Lists/Preview/Section"]
+margin_top = 18.0
+margin_right = 320.0
+margin_bottom = 22.0
+
+[node name="Description" type="RichTextLabel" parent="Quest/Lists/Preview/Section"]
+margin_top = 26.0
+margin_right = 320.0
+margin_bottom = 534.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Finished" type="ItemList" parent="Quest/Lists"]
+margin_left = 676.0
+margin_right = 1010.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="Manual/Events/New" to="." method="_on_New_pressed"]
+[connection signal="pressed" from="Manual/Events/Abort" to="." method="_on_Abort_pressed"]
